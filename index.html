@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Ads Excellence Playbook</title>
+    <!-- Favicon (Desktop Icon) using SVG Data URI -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .active-tab { transform: scale(1.05); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .flyer-transition { transition: all 0.3s ease-in-out; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen">
+
+<div id="app" class="max-w-6xl mx-auto p-4 md:p-8">
+    <!-- Header -->
+    <header class="mb-10 text-center">
+        <div class="inline-block bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-bold mb-4 uppercase tracking-tighter">
+            The Complete Google Ads Reference Pack
+        </div>
+        <h1 class="text-4xl font-extrabold text-slate-900 mb-2 tracking-tight">
+            The Ultimate Feature Flyer Pack
+        </h1>
+        <p class="text-slate-500 max-w-2xl mx-auto">
+            A standalone interactive guide covering every Google Ads feature, explained through Baker Ben and Strategist Sarah.
+        </p>
+    </header>
+
+    <!-- Category Navigation -->
+    <div id="category-nav" class="flex flex-wrap justify-center gap-2 mb-10">
+        <!-- JS will inject buttons here -->
+    </div>
+
+    <!-- Main Interface -->
+    <div class="grid lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Sidebar -->
+        <div class="hidden lg:block lg:col-span-3 h-[700px] flex flex-col">
+            <h3 id="sidebar-title" class="text-xs font-bold text-slate-400 uppercase tracking-widest px-2 mb-4">Features</h3>
+            <div id="sidebar-list" class="space-y-1 overflow-y-auto flex-grow pr-2">
+                <!-- JS will inject list items here with icons -->
+            </div>
+        </div>
+
+        <!-- Main Flyer Card -->
+        <div class="lg:col-span-9">
+            <div id="main-card" class="bg-white rounded-[2.5rem] shadow-2xl overflow-hidden border border-slate-100 flex flex-col flyer-transition min-h-[650px]">
+                
+                <!-- Card Header -->
+                <div id="card-header" class="p-8 text-white relative bg-blue-600">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="bg-white/20 text-white text-[10px] font-black px-2 py-1 rounded-md uppercase tracking-wider mb-2 inline-block">
+                                Feature Deep Dive
+                            </span>
+                            <h2 id="feature-name" class="text-3xl md:text-4xl font-black mb-1">Feature Name</h2>
+                            <p id="feature-cat" class="text-white/80 font-medium">Category</p>
+                        </div>
+                        <div id="header-icon" class="bg-white/10 p-4 rounded-3xl backdrop-blur-md hidden md:block">
+                            <i data-lucide="target" class="w-10 h-10"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-6 md:p-10 flex-grow">
+                    <!-- Dialogue Section -->
+                    <div class="space-y-8 mb-10">
+                        <!-- Ben -->
+                        <div class="flex gap-4 items-start max-w-[90%]">
+                            <div class="w-10 h-10 rounded-xl bg-orange-100 flex-shrink-0 flex items-center justify-center border-2 border-orange-200">
+                                <span class="text-lg font-bold text-orange-600">B</span>
+                            </div>
+                            <div class="bg-orange-50 p-4 rounded-2xl rounded-tl-none border border-orange-100 relative shadow-sm">
+                                <p id="ben-quote" class="text-slate-800 leading-relaxed font-medium italic text-sm md:text-base">"Ben's quote goes here."</p>
+                                <span class="absolute -top-6 left-0 text-[10px] font-bold text-orange-400 uppercase tracking-widest">Baker Ben</span>
+                            </div>
+                        </div>
+
+                        <!-- Sarah -->
+                        <div class="flex gap-4 items-start justify-end ml-auto max-w-[90%] text-right">
+                            <div class="bg-blue-50 p-4 rounded-2xl rounded-tr-none border border-blue-100 relative shadow-sm text-left">
+                                <p id="sarah-quote" class="text-slate-800 leading-relaxed font-medium italic text-sm md:text-base">"Sarah's quote goes here."</p>
+                                <span class="absolute -top-6 right-0 text-[10px] font-bold text-blue-400 uppercase tracking-widest">Strategist Sarah</span>
+                            </div>
+                            <div class="w-10 h-10 rounded-xl bg-blue-100 flex-shrink-0 flex items-center justify-center border-2 border-blue-200">
+                                <span class="text-lg font-bold text-blue-600">S</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Impact Divider -->
+                    <div class="border-t border-slate-100 pt-8">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-2 text-emerald-600 font-bold uppercase text-xs tracking-widest">
+                                    <i data-lucide="trending-up" class="w-4 h-4"></i>
+                                    Business Impact
+                                </div>
+                                <p id="feature-impact" class="text-slate-600 leading-relaxed font-semibold text-base md:text-lg">Impact goes here.</p>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-2 text-blue-600 font-bold uppercase text-xs tracking-widest">
+                                    <i data-lucide="shield-check" class="w-4 h-4"></i>
+                                    Action Item
+                                </div>
+                                <p id="feature-action" class="text-slate-500 text-sm leading-relaxed">Specific recommendation for the team.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Nav -->
+                <div class="bg-slate-50 p-4 flex justify-between items-center border-t border-slate-100">
+                    <button onclick="prevFeature()" class="p-2 rounded-full hover:bg-white hover:shadow-md transition-all text-slate-400 hover:text-blue-600">
+                        <i data-lucide="chevron-left"></i>
+                    </button>
+                    <div class="text-center">
+                        <p id="progress-text" class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-1">PROGRESS</p>
+                        <div id="progress-dots" class="flex gap-1 justify-center max-w-[150px] overflow-hidden"></div>
+                    </div>
+                    <button onclick="nextFeature()" class="p-2 rounded-full hover:bg-white hover:shadow-md transition-all text-slate-400 hover:text-blue-600">
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-16 pb-12 text-center text-slate-400 text-xs">
+        <p>© 2024 Google Ads Strategy Pack • Complete Digital Reference</p>
+    </footer>
+</div>
+
+<script>
+    const allFlyers = {
+        "Bidding": [
+            { name: "Maximize Clicks", ben: "I just want people to walk through the digital door!", sarah: "Then this is our volume driver. It tells Google to get as many visitors as possible.", impact: "Maximum traffic for brand awareness.", action: "Use when the goal is traffic, not necessarily sales yet." },
+            { name: "Maximize Conversions", ben: "I want people buying croissants, not just looking!", sarah: "Exactly. This finds the people most likely to place an order.", impact: "High efficiency for lead gen and sales.", action: "Best for accounts with consistent conversion tracking." },
+            { name: "Maximize Conv. Value", ben: "Can we find the big catering gigs instead of just single cookies?", sarah: "Yes! This priorities total revenue over just the number of orders.", impact: "Ideal for maximizing ROI and high-ticket sales.", action: "Requires value tracking (e.g., cart totals) in Google Ads." },
+            { name: "Target CPA", ben: "I only want to spend $5 to acquire a new customer.", sarah: "We set that limit. Google only bids if it thinks it can get that customer for $5 or less.", impact: "Strict cost control per customer.", action: "Monitor 'Below Target' vs 'Above Target' performance." },
+            { name: "Target ROAS", ben: "For every $1 spent, I need $5 back.", sarah: "That's 500% Return on Ad Spend. We set it, and the AI hunts for high-value shoppers.", impact: "Direct profitability management.", action: "Increase ROAS target to improve profit, decrease to expand reach." },
+            { name: "Target Impression Share", ben: "When someone searches 'best bakery', I want to be at the very top.", sarah: "We'll set our target to 'Absolute Top of Page'. It ensures dominant visibility.", impact: "Unrivaled brand authority.", action: "Use for defensive branding or brand awareness." },
+            { name: "Bid Strategy", ben: "Which 'recipe' should I choose for my bidding?", sarah: "It depends on your goal! We can choose manual control or let Google's AI take the wheel.", impact: "Determines how your budget is spent.", action: "Review every 30 days to ensure it matches business goals." }
+        ],
+        "Metrics": [
+            { name: "Optimization Score", ben: "My score is 80%. Is that a B-grade?", sarah: "Think of it as an efficiency rating. Improving it unlocks growth potential.", impact: "Measures account health.", action: "Apply or dismiss recommendations to hit 100%." },
+            { name: "Impressions", ben: "How many people actually saw my sign today?", sarah: "Impressions tell us that. It's the number of times your ad was displayed.", impact: "Broad measure of reach.", action: "High impressions but low clicks? Check your ad copy." },
+            { name: "Clicks & CTR", ben: "People see the ad, but are they interested?", sarah: "CTR (Click-Through Rate) tells us that. High CTR means they love what they see.", impact: "Measures ad relevance.", action: "Aim for a CTR above 3-5% for Search campaigns." },
+            { name: "Avg. CPC", ben: "How much am I paying for each visitor?", sarah: "Avg. CPC is the 'per-visit' price. It changes based on competition.", impact: "Measures cost efficiency.", action: "Keep an eye on this when competitors enter the market." },
+            { name: "Conversions & Rate", ben: "So, out of 100 people, how many bought a cake?", sarah: "That's your Conversion Rate. It's the ultimate 'win' metric.", impact: "Measures bottom-line success.", action: "Focus on landing page speed to boost this number." },
+            { name: "Cost / Conv.", ben: "Is $10 per customer good?", sarah: "If your profit is $20, then $10 is great! It's your acquisition cost.", impact: "ROI Health Check.", action: "Target a Cost/Conv lower than your customer lifetime value." },
+            { name: "Top Impression %", ben: "Am I at the top or at the bottom of the page?", sarah: "This metric shows exactly how often you're in the #1 or #2 spot.", impact: "Measures premium visibility.", action: "If this is low, your Ad Rank or Bid needs a boost." },
+            { name: "Search Lost IS (Budget)", ben: "Why didn't my ad show up at 4 PM?", sarah: "You ran out of budget! This shows how much traffic you missed.", impact: "Indicates a need for budget scaling.", action: "Check your daily spend limits and peak hours." },
+            { name: "Search Lost IS (Rank)", ben: "I have the money, so why am I in 3rd place?", sarah: "Your 'Ad Rank'—a mix of bid and quality—is being beaten.", impact: "Highlights quality or bid issues.", action: "Improve your 'Quality Score' to win back rank." }
+        ],
+        "Targeting": [
+            { name: "Add New Keywords", ben: "I'm baking gluten-free now. Should we target that?", sarah: "Yes! Adding keywords expands your reach to new audiences.", impact: "Growth and expansion.", action: "Use Keyword Planner to find related terms with high volume." },
+            { name: "Remove Redundant", ben: "I have 'bread shop' and 'shop for bread'. Do I need both?", sarah: "Nope. They compete. Removing one cleans up our data.", impact: "Saves budget and internal competition.", action: "Keep the keyword with the best historical data." },
+            { name: "Remove Non-Serving", ben: "What about keywords with zero clicks in 6 months?", sarah: "They are dead weight. Let's pause them to focus on winners.", impact: "Improves account speed and focus.", action: "Audit and 'clean the kitchen' every 30 days." },
+            { name: "Add Broad Match", ben: "Is Broad Match too risky?", sarah: "Not with Smart Bidding! It finds related searches we haven't thought of.", impact: "Discovers new trends.", action: "Pair with an automated bidding strategy for safety." },
+            { name: "Search Partners", ben: "Can we show ads on other sites, not just Google?", sarah: "Yes, Search Partners extends your reach to hundreds of other sites.", impact: "Increased reach at a lower cost.", action: "Monitor performance separately; opt-out if ROI is lower." },
+            { name: "Optimized Targeting", ben: "Can Google find customers I didn't think of?", sarah: "Yes. It finds 'lookalikes' based on who is already buying.", impact: "AI-driven audience growth.", action: "Best for Display, Video, and Discovery campaigns." },
+            { name: "Ad Schedule", ben: "Can we stop ads at 2 AM when the bakery is closed?", sarah: "Absolutely. We set hours to ensure we bid when you're ready to sell.", impact: "Saves budget during off-peak hours.", action: "Analyze 'Time of Day' reports to find your best hours." },
+            { name: "Locations & Devices", ben: "Should we only show ads to people in our town?", sarah: "Yes, and we can prioritize mobile users who are on the go.", impact: "Hyper-local efficiency.", action: "Check 'Location' reports to see where your best buyers live." }
+        ],
+        "Ads & Assets": [
+            { name: "Responsive Search Ads", ben: "I can't decide which headline is better.", sarah: "Why choose? We give Google 15 options and it picks the best for us.", impact: "Automated copy optimization.", action: "Include at least 2 headlines with your main keywords." },
+            { name: "Improve RSAs", ben: "Google says my ad strength is 'Average'. How do we get 'Excellent'?", sarah: "We add more unique headlines and highlight our benefits!", impact: "Better rank and lower CPC.", action: "Aim for 'Good' or 'Excellent' for every ad." },
+            { name: "Optimized Ad Rotation", ben: "Which of our ads is winning?", sarah: "Google knows. It shows the best performing ad more often.", impact: "Maximizes click potential.", action: "Keep this setting 'On' to let the AI help you." },
+            { name: "Sitelink Assets", ben: "Can I link directly to my 'Cake Menu'?", sarah: "Yes! Sitelinks give shortcuts to specific pages on your site.", impact: "Increases ad size and CTR.", action: "Add at least 4 unique sitelinks per campaign." },
+            { name: "Image Assets", ben: "Can I show a photo of my bread in the search results?", sarah: "Yes! Images make your ad visual and highly clickable.", impact: "Visual appeal and trust.", action: "Upload high-quality, square images of your products." },
+            { name: "Call Assets", ben: "I want people to call the shop with one tap.", sarah: "We'll add a 'Call' button right next to your ad on mobile.", impact: "Direct phone leads.", action: "Only show call assets during business hours." },
+            { name: "Promotion Assets", ben: "Can we show a '20% off' tag for the holidays?", sarah: "Perfect for the Price/Promotion asset. It stands out in the results.", impact: "Urgency and sales incentive.", action: "Set start and end dates to match your in-store sales." },
+            { name: "Lead Form Assets", ben: "Can people sign up for my newsletter without leaving Google?", sarah: "Yes. It makes signing up much faster and easier for them.", impact: "Higher lead conversion rate.", action: "Sync with your CRM to follow up with leads immediately." }
+        ],
+        "Maintenance": [
+            { name: "Fix Ad Destinations", ben: "My link is broken!", sarah: "That's a budget killer. We need to ensure every link works.", impact: "Prevents wasted spend.", action: "Run a 'URL Checker' monthly to catch broken pages." },
+            { name: "Remove Unused Groups", ben: "I have old ad groups from last year's sale.", sarah: "Let's delete them. A clean account is an efficient account.", impact: "Simplifies management.", action: "Delete empty or zero-traffic ad groups." },
+            { name: "Conflicting Negatives", ben: "Wait, am I blocking myself?", sarah: "Sometimes! We check for negative keywords that block good traffic.", impact: "Restores 'lost' traffic.", action: "Review 'Conflict' reports in the Recommendations tab." },
+            { name: "Underperforming Assets", ben: "This photo isn't getting any clicks.", sarah: "Time to bake something new. We'll swap it for a fresh visual.", impact: "Protects your CTR.", action: "Replace 'Low' performing assets every 60-90 days." }
+        ],
+        "Measurement": [
+            { name: "Conversion Tracking", ben: "Did that click actually buy a pie?", sarah: "With tracking, we know for sure. It closes the loop.", impact: "Proof of ROI.", action: "Test your conversion tags regularly to ensure accuracy." },
+            { name: "Data-Driven Attribution", ben: "Who gets credit for the sale?", sarah: "DDA gives credit to every touchpoint, not just the last click.", impact: "True view of marketing value.", action: "Switch to DDA as soon as you have enough conversion data." },
+            { name: "Enhanced Conversions", ben: "How do we track better with all these privacy changes?", sarah: "Enhanced Conversions recover 'lost' data securely.", impact: "More accurate reporting.", action: "Essential for accounts spending over $1k/month." },
+            { name: "Offline Imports", ben: "What if they buy in-store after clicking an ad?", sarah: "We can import that data back into Google Ads!", impact: "The full business picture.", action: "Upload your sales data weekly for better optimization." }
+        ],
+        "Experiments": [
+            { name: "Performance Max", ben: "Can I be on Search, YouTube, and Maps at once?", sarah: "P-Max does it all. It's the most automated way to grow.", impact: "Full-funnel reach.", action: "Provide high-quality video and images for best results." },
+            { name: "Test Auto Created Assets", ben: "Google is writing my headlines?", sarah: "It uses your website to create headlines that match what people search.", impact: "Hyper-relevance.", action: "Review for brand tone, but keep 'On' for better CTR." },
+            { name: "Migrate to P-Max", ben: "Should I switch my old campaigns to the new AI version?", sarah: "Usually, yes! But we'll test it first to ensure it's better.", impact: "Future-proofing your account.", action: "Use the 'Upgrade' tool for Smart Shopping campaigns." }
+        ]
+    };
+
+    const categories = [
+        { id: "Bidding", icon: "target", color: "bg-blue-600" },
+        { id: "Metrics", icon: "bar-chart-3", color: "bg-emerald-600" },
+        { id: "Targeting", icon: "search", color: "bg-amber-500" },
+        { id: "Ads & Assets", icon: "zap", color: "bg-purple-600" },
+        { id: "Maintenance", icon: "wrench", color: "bg-rose-600" },
+        { id: "Measurement", icon: "activity", color: "bg-indigo-600" },
+        { id: "Experiments", icon: "flask-conical", color: "bg-cyan-600" }
+    ];
+
+    let currentCategory = "Bidding";
+    let currentIndex = 0;
+
+    function init() {
+        renderCategories();
+        updateDisplay();
+        // Initial icon generation
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    }
+
+    function renderCategories() {
+        const nav = document.getElementById('category-nav');
+        nav.innerHTML = categories.map(cat => `
+            <button onclick="setCategory('${cat.id}')" id="btn-${cat.id}" class="cat-btn flex items-center gap-2 px-4 py-2 rounded-xl transition-all font-semibold bg-white text-slate-600 border border-slate-200 hover:border-slate-400 text-sm">
+                <i data-lucide="${cat.icon}" class="w-4 h-4"></i>
+                ${cat.id}
+            </button>
+        `).join('');
+    }
+
+    function setCategory(id) {
+        currentCategory = id;
+        currentIndex = 0;
+        updateDisplay();
+    }
+
+    function updateDisplay() {
+        const catData = categories.find(c => c.id === currentCategory);
+        const features = allFlyers[currentCategory];
+        const feature = features[currentIndex];
+
+        // Update Category Buttons
+        document.querySelectorAll('.cat-btn').forEach(btn => {
+            btn.className = "cat-btn flex items-center gap-2 px-4 py-2 rounded-xl transition-all font-semibold bg-white text-slate-600 border border-slate-200 hover:border-slate-400 text-sm";
+        });
+        const activeBtn = document.getElementById(`btn-${currentCategory}`);
+        if (activeBtn) {
+            activeBtn.className = `${catData.color} text-white shadow-md scale-105 cat-btn flex items-center gap-2 px-4 py-2 rounded-xl transition-all font-semibold text-sm`;
+        }
+
+        // Update Sidebar with icons
+        document.getElementById('sidebar-title').innerText = `Features in ${currentCategory}`;
+        const sidebar = document.getElementById('sidebar-list');
+        sidebar.innerHTML = features.map((f, i) => `
+            <button onclick="setFeature(${i})" class="w-full text-left px-3 py-2 rounded-lg transition-all text-xs font-medium flex items-center gap-2 ${i === currentIndex ? 'bg-white shadow-sm text-blue-600 border-l-4 border-blue-600' : 'text-slate-500 hover:bg-slate-100'}">
+                <i data-lucide="${catData.icon}" class="w-3.5 h-3.5 flex-shrink-0"></i>
+                ${f.name}
+            </button>
+        `).join('');
+
+        // Update Card
+        const header = document.getElementById('card-header');
+        header.className = `p-8 text-white relative ${catData.color}`;
+        document.getElementById('feature-name').innerText = feature.name;
+        document.getElementById('feature-cat').innerText = `Category: ${currentCategory}`;
+        document.getElementById('header-icon').innerHTML = `<i data-lucide="${catData.icon}" class="w-10 h-10"></i>`;
+        document.getElementById('ben-quote').innerText = `"${feature.ben}"`;
+        document.getElementById('sarah-quote').innerText = `"${feature.sarah}"`;
+        document.getElementById('feature-impact').innerText = feature.impact;
+        document.getElementById('feature-action').innerText = feature.action;
+
+        // Progress dots
+        document.getElementById('progress-text').innerText = `Progress in ${currentCategory}`;
+        const dots = document.getElementById('progress-dots');
+        dots.innerHTML = features.map((_, i) => `
+            <div class="h-1.5 rounded-full flex-shrink-0 transition-all ${i === currentIndex ? 'w-6 bg-blue-600' : 'w-1.5 bg-slate-300'}"></div>
+        `).join('');
+
+        // Regenerate icons after content change
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    }
+
+    function setFeature(index) {
+        currentIndex = index;
+        updateDisplay();
+    }
+
+    function nextFeature() {
+        const features = allFlyers[currentCategory];
+        currentIndex = (currentIndex + 1) % features.length;
+        updateDisplay();
+    }
+
+    function prevFeature() {
+        const features = allFlyers[currentCategory];
+        currentIndex = (currentIndex - 1 + features.length) % features.length;
+        updateDisplay();
+    }
+
+    // Ensure the init runs after the window and scripts are loaded
+    window.onload = init;
+</script>
+</body>
+</html>
